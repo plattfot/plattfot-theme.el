@@ -73,6 +73,7 @@ E.g. comments, org mode tags etc"
  (plattfot-theme--metadata 'org-priority)
  (plattfot-theme--metadata 'org-special-keyword)
  (plattfot-theme--metadata 'org-date)
+ (plattfot-theme--metadata 'org-agenda-done)
 
  ;; Org agenda
  `(org-agenda-date ((t (:foreground "#ddd"))))
