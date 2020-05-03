@@ -1,5 +1,4 @@
 ;;; code:
-
 (deftheme plattfot
   "Color theme with the roots from sunburst-theme.
 
@@ -8,7 +7,7 @@ to a minimum.")
 
 (defgroup plattfot-theme nil
   "Group for the plattfot theme"
-  :group 'theme)
+  :group 'faces)
 
 (defcustom plt-blue "#3387cc"
   "Main blue color of the plattfot theme."
@@ -19,6 +18,22 @@ to a minimum.")
   "Main yellow color of the plattfot theme."
   :type 'string
   :group 'plattfot-theme)
+
+(defcustom plt-red "#cc333b"
+  "Main red color of the plattfot theme."
+  :type 'string
+  :group 'plattfot-theme)
+
+(defcustom plt-metadata "#666"
+  "Color for metadata of the plattfot theme.
+
+E.g. comments, org mode tags etc"
+  :type 'string
+  :group 'plattfot-theme)
+
+(defun plattfot-theme--metadata (face)
+  "Fade the FACE into the background."
+  `(,face ((t (:foreground ,plt-metadata)))))
 
 (custom-theme-set-faces
  'plattfot
@@ -31,28 +46,17 @@ to a minimum.")
  `(border-glyph ((t (nil))))
  `(vertical-border ((t (:background "#111" :foreground "#222"))))
  `(fringe  ((t (:background "#111"))))
- `(link ((t (:foreground "#3387cc" :underline t))))
+ `(link ((t (:foreground ,plt-blue :underline t))))
  ;; Info
  `(Info-quoted ((t (:foreground "dark gray"))))
  `(info-menu-star ((t (:foreground ,plt-yellow))))
  `(link-visited ((t (:foreground "violet" :inherit link))))
  `(mode-line-inactive  ((t (:background "#222" :foreground "#666"))))
  `(mode-line           ((t (:background "#222" :foreground ,plt-blue))))
- ;; avy
- `(avy-background-face
-   ((t (:foreground "#666" :background "#111" :inverse-video nil))))
- `(avy-lead-face-0
-   ((t (:foreground ,plt-blue :background "#111" :inverse-video nil :weight bold))))
- `(avy-lead-face-1
-   ((t (:foreground "#cf6a4c" :background "#111" :inverse-video nil :weight bold))))
- `(avy-lead-face-2
-   ((t (:foreground ,plt-yellow :background "#111" :inverse-video nil :weight bold))))
- `(avy-lead-face
-   ((t (:foreground "#65b042" :background "#111" :inverse-video nil :weight bold))))
 
  ;; mini buff
  `(minibuffer-prompt ((t (:foreground ,plt-blue :bold t :background nil))))
- `(trailing-whitespace ((t (:background "#cc333b"))))
+ `(trailing-whitespace ((t (:background ",plt-red"))))
 
  ;; Org-mode list and other outline things
  `(outline-1 ((t (:foreground "dark gray" :bold t))))
@@ -64,27 +68,27 @@ to a minimum.")
  `(outline-7 ((t (:foreground "dark gray" :bold t))))
  `(outline-8 ((t (:foreground "dark gray" :bold t))))
 
- `(org-tag ((t (:foreground "#666" ))))
- `(org-checkbox-statistics-todo ((t (:foreground "#666" ))))
- `(org-priority ((t (:foreground "#666" ))))
- `(org-special-keyword ((t (:foreground "#666" ))))
- `(org-date ((t (:foreground "#666" ))))
+ (plattfot-theme--metadata 'org-tag)
+ (plattfot-theme--metadata 'org-checkbox-statistics-todo)
+ (plattfot-theme--metadata 'org-priority)
+ (plattfot-theme--metadata 'org-special-keyword)
+ (plattfot-theme--metadata 'org-date)
 
  ;; Org agenda
  `(org-agenda-date ((t (:foreground "#ddd"))))
  `(org-agenda-date-weekend ((t (:foreground "#ddd"))))
- `(org-warning ((t (:foreground "#cc333b"))))
+ `(org-warning ((t (:foreground ",plt-red"))))
  `(org-super-agenda-header ((t (:foreground ,plt-blue))))
 
  `(org-scheduled-previously ((t (:foreground "dark gray" :bold t))))
  `(org-scheduled-today ((t (:foreground "#ffffff"))))
  `(org-scheduled ((t (:foreground "dark gray"))))
 
- `(org-todo ((t (:foreground ,plt-blue :bold t))))
+ `(org-todo ((t (:foreground "pink" :bold t))))
  `(org-done ((t (:foreground "#99cf50" :bold t))))
  `(buffers-tab ((t (:background "#111" :foreground "#ddd"))))
  `(font-lock-builtin-face ((t (:foreground "#dd7b3b"))))
- `(font-lock-comment-face ((t (:foreground "#666" ))))
+ (plattfot-theme--metadata 'font-lock-comment-face)
  `(font-lock-constant-face ((t (:foreground "#99cf50"))))
  `(font-lock-doc-string-face ((t (:foreground "#9b859d"))))
  `(font-lock-function-name-face ((t (:foreground ,plt-yellow :bold t))))
@@ -136,7 +140,7 @@ to a minimum.")
  `(company-tooltip-selection ((t (:inherit default :background ,plt-blue))))
  `(company-tooltip-common
    ((t (:inherit font-lock-constant-face :foreground "#ddd" :bold t :underline t))))
- `(company-tooltip-annotation ((t (:foreground "#666"))))
+ (plattfot-theme--metadata  'company-tooltip-annotation)
  `(company-scrollbar-bg ((t (:background "#222"))))
  `(company-scrollbar-fg ((t (:background "#666"))))
  `(company-preview  ((t (:inherit font-lock-comment-face :underline t ))))
