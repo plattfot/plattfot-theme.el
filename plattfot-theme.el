@@ -54,7 +54,7 @@ E.g. comments, org mode tags etc"
  `(mode-line-inactive  ((t (:background "#222" :foreground "#666"))))
  `(mode-line           ((t (:background "#222" :foreground ,plt-blue))))
  ;; eglot
- `(eglot-mode-line     ((t (:foreground ,plt-blue))))
+ `(eglot-mode-line     ((t (:inherit mode-line-inactive))))
 
  ;; compilation
  `(compilation-mode-line-run ((t (:background "#222" :foreground ,plt-blue))))
