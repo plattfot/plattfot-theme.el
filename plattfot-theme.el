@@ -56,7 +56,7 @@ E.g. comments, org mode tags etc"
 
  ;; mini buff
  `(minibuffer-prompt ((t (:foreground ,plt-blue :bold t :background nil))))
- `(trailing-whitespace ((t (:background ",plt-red"))))
+ `(trailing-whitespace ((t (:background ,plt-red))))
 
  ;; Org-mode list and other outline things
  `(outline-1 ((t (:foreground "dark gray" :bold t))))
@@ -78,7 +78,7 @@ E.g. comments, org mode tags etc"
  ;; Org agenda
  `(org-agenda-date ((t (:foreground "#ddd"))))
  `(org-agenda-date-weekend ((t (:foreground "#ddd"))))
- `(org-warning ((t (:foreground ",plt-red"))))
+ `(org-warning ((t (:foreground ,plt-red))))
  `(org-super-agenda-header ((t (:foreground ,plt-blue))))
 
  `(org-scheduled-previously ((t (:foreground "dark gray" :bold t))))
