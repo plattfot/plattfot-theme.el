@@ -53,6 +53,11 @@ E.g. comments, org mode tags etc"
  `(link-visited ((t (:foreground "violet" :inherit link))))
  `(mode-line-inactive  ((t (:background "#222" :foreground "#666"))))
  `(mode-line           ((t (:background "#222" :foreground ,plt-blue))))
+ ;; compilation
+ `(compilation-mode-line-run ((t (:background "#222" :foreground ,plt-blue))))
+ `(compilation-error ((t (:foreground ,plt-red))))
+ `(compilation-warning ((t (:foreground ,plt-yellow))))
+ `(compilation-info ((t (:foreground "#99cf50"))))
 
  ;; mini buff
  `(minibuffer-prompt ((t (:foreground ,plt-blue :bold t :background nil))))
