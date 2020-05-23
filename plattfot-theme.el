@@ -53,6 +53,9 @@ E.g. comments, org mode tags etc"
  `(link-visited ((t (:foreground "violet" :inherit link))))
  `(mode-line-inactive  ((t (:background "#222" :foreground "#666"))))
  `(mode-line           ((t (:background "#222" :foreground ,plt-blue))))
+ ;; eglot
+ `(eglot-mode-line     ((t (:foreground ,plt-blue))))
+
  ;; compilation
  `(compilation-mode-line-run ((t (:background "#222" :foreground ,plt-blue))))
  `(compilation-error ((t (:foreground ,plt-red))))
