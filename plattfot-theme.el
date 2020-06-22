@@ -171,6 +171,11 @@ E.g. comments, org mode tags etc"
  ;; Tooltip
  `(tooltip ((t (:inherit variable-pitch :background "#222" :foreground "#666"))))
 
+ ;; Elfeed
+ (plattfot-theme--metadata 'elfeed-search-feed-face)
+ `(elfeed-search-date-face ((t (:foreground ,plt-blue))))
+ `(elfeed-search-tag-face ((t (:foreground "#99cf50"))))
+
  ;; Ediff
  `(ediff-current-diff-A ((t (:background "gray20"))))
  `(ediff-current-diff-Ancestor ((t (:background "gray20"))))
