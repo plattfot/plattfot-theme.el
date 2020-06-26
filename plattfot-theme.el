@@ -173,7 +173,9 @@ E.g. comments, org mode tags etc"
 
  ;; Elfeed
  (plattfot-theme--metadata 'elfeed-search-feed-face)
- `(elfeed-search-date-face ((t (:foreground ,plt-blue))))
+ (plattfot-theme--metadata 'elfeed-search-date-face)
+ `(elfeed-search-title-face ((t (:foreground "#CCC" :weight bold))))
+ `(elfeed-search-unread-title-face ((t (:foreground "#fff" :weight bold))))
  `(elfeed-search-tag-face ((t (:foreground "#99cf50"))))
 
  ;; Ediff
