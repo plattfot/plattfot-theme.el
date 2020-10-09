@@ -196,6 +196,14 @@ E.g. comments, org mode tags etc"
  `(ediff-odd-diff-Ancestor ((t (:background "gray11"))))
  `(ediff-odd-diff-B ((t (:background "gray11"))))
  `(ediff-odd-diff-C ((t (:background "gray11"))))
+ ;; Popup
+ `(popup-menu-face ((t (:foreground "#ddd" :background "#222"))))
+ `(popup-menu-summary-face ((t (:foreground "#ddd" :background "#222"))))
+ `(popup-tip-face ((t (:foreground "#ddd" :background "#222"))))
+ `(popup-face ((t (:foreground "#ddd" :background "#222"))))
+ `(popup-isearch-match ((t (:foreground ,plt-blue :background "#222"))))
+ `(popup-menu-selection-face ((t (:foreground "#111" :background ,plt-blue :weight bold))))
+ `(popup-menu-mouse-face ((t (:foreground "#111" :background "steelblue"))))
  )
 
 (provide-theme 'plattfot)
