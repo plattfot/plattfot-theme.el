@@ -204,6 +204,7 @@ E.g. comments, org mode tags etc"
  `(popup-isearch-match ((t (:foreground ,plt-blue :background "#222"))))
  `(popup-menu-selection-face ((t (:foreground "#111" :background ,plt-blue :weight bold))))
  `(popup-menu-mouse-face ((t (:foreground "#111" :background "steelblue"))))
+ (plattfot-theme--metadata 'fill-column-indicator)
  )
 
 (provide-theme 'plattfot)
