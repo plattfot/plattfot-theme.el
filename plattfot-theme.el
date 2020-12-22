@@ -206,6 +206,7 @@ E.g. comments, org mode tags etc"
  `(popup-menu-selection-face ((t (:foreground "#111" :background ,plt-blue :weight bold))))
  `(popup-menu-mouse-face ((t (:foreground "#111" :background "steelblue"))))
  (plattfot-theme--metadata 'fill-column-indicator)
+ `(selectrum-current-candidate ((t (:foreground "#222" :background ,plt-blue))))
  )
 
 (provide-theme 'plattfot)
