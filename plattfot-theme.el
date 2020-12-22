@@ -48,6 +48,7 @@ E.g. comments, org mode tags etc"
  `(fringe  ((t (:background "#111"))))
  `(link ((t (:foreground ,plt-blue :underline t))))
  (plattfot-theme--metadata  'escape-glyph)
+ (plattfot-theme--metadata 'nobreak-hyphen)
  ;; Info
  `(Info-quoted ((t (:foreground "dark gray"))))
  `(info-menu-star ((t (:foreground ,plt-yellow))))
