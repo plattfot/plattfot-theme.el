@@ -65,7 +65,7 @@ E.g. comments, org mode tags etc"
  `(compilation-info ((t (:foreground "#99cf50"))))
 
  ;; mini buff
- `(minibuffer-prompt ((t (:foreground ,plt-blue :bold t :background nil))))
+ `(minibuffer-prompt ((t (:foreground "#ddd" :bold t :background nil))))
  `(trailing-whitespace ((t (:background ,plt-red))))
 
  ;; Org-mode list and other outline things
