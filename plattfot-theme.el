@@ -207,6 +207,11 @@ E.g. comments, org mode tags etc"
  `(popup-menu-mouse-face ((t (:foreground "#111" :background "steelblue"))))
  (plattfot-theme--metadata 'fill-column-indicator)
  `(selectrum-current-candidate ((t (:foreground "#222" :background ,plt-blue))))
+ ;; w3m
+ `(w3m-anchor ((t (:inherit link))))
+ `(w3m-image-anchor ((t (:foreground "#222" :background ,plt-blue
+                         :box (:line-width 2 :color ,plt-blue :style released-button)))))
+ `(w3m-image ((t (:inherit font-lock-string-face))))
  )
 
 (provide-theme 'plattfot)
