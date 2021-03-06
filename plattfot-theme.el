@@ -14,6 +14,11 @@ to a minimum.")
   :type 'string
   :group 'plattfot-theme)
 
+(defcustom plt-green "#99cf50"
+  "Main green color of the plattfot theme."
+  :type 'string
+  :group 'plattfot-theme)
+
 (defcustom plt-yellow "#e9c062"
   "Main yellow color of the plattfot theme."
   :type 'string
@@ -96,12 +101,12 @@ E.g. comments, org mode tags etc"
  `(org-scheduled ((t (:foreground "dark gray"))))
 
  `(org-todo ((t (:foreground "pink" :bold t))))
- `(org-done ((t (:foreground "#99cf50" :bold t))))
+ `(org-done ((t (:foreground ,plt-green :bold t))))
  `(org-document-title ((t (:foreground ,plt-blue :bold t))))
  `(buffers-tab ((t (:background "#111" :foreground "#ddd"))))
  `(font-lock-builtin-face ((t (:foreground "#dd7b3b"))))
  (plattfot-theme--metadata 'font-lock-comment-face)
- `(font-lock-constant-face ((t (:foreground "#99cf50"))))
+ `(font-lock-constant-face ((t (:foreground ,plt-green))))
  `(font-lock-doc-string-face ((t (:foreground "#9b859d"))))
  `(font-lock-function-name-face ((t (:foreground ,plt-yellow :bold t))))
  `(font-lock-keyword-face ((t (:foreground "#cf6a4c" :bold t))))
@@ -179,7 +184,7 @@ E.g. comments, org mode tags etc"
  (plattfot-theme--metadata 'elfeed-search-date-face)
  `(elfeed-search-title-face ((t (:foreground "#CCC" :weight bold))))
  `(elfeed-search-unread-title-face ((t (:foreground "#fff" :weight bold))))
- `(elfeed-search-tag-face ((t (:foreground "#99cf50"))))
+ `(elfeed-search-tag-face ((t (:foreground ,plt-green))))
 
  ;; Ediff
  `(ediff-current-diff-A ((t (:background "gray20"))))
