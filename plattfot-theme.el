@@ -29,6 +29,16 @@ to a minimum.")
   :type 'string
   :group 'plattfot-theme)
 
+(defcustom plt-purple "#a020f0"
+  "Main purple color of the plattfot theme."
+  :type 'string
+  :group 'plattfot-theme)
+
+(defcustom plt-dark-purple "#663399"
+  "Main dark purplish color of the plattfot theme."
+  :type 'string
+  :group 'plattfot-theme)
+
 (defcustom plt-metadata "#666"
   "Color for metadata of the plattfot theme.
 
