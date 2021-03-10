@@ -77,7 +77,7 @@ E.g. comments, org mode tags etc"
  `(compilation-mode-line-run ((t (:background "#222" :foreground ,plt-blue))))
  `(compilation-error ((t (:foreground ,plt-red))))
  `(compilation-warning ((t (:foreground ,plt-yellow))))
- `(compilation-info ((t (:inherit 'font-lock-builtin-face))))
+ `(compilation-info ((t (:foreground ,plt-green))))
 
  ;; mini buff
  `(minibuffer-prompt ((t (:foreground "#ddd" :bold t :background nil))))
