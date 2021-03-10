@@ -231,7 +231,7 @@ E.g. comments, org mode tags etc"
  ;; mood-line
  (plattfot-theme--metadata 'mood-line-unimportant)
  (plattfot-theme--metadata 'mood-line-status-neutral)
- `(mood-line-modified ((t (:inherit compilation-info))))
+ `(mood-line-modified ((t (:inherit 'font-lock-builtin-face))))
  `(mood-line-status-success ((t (:foreground ,plt-green))))
  `(mood-line-status-error ((t (:inherit compilation-error))))
  `(mood-line-status-warning ((t (:inherit compilation-warning))))
