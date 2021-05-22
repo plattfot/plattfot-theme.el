@@ -224,6 +224,10 @@ E.g. comments, org mode tags etc"
  (plattfot-theme--metadata 'fill-column-indicator)
  `(selectrum-current-candidate ((t (:foreground "#222" :background ,plt-blue))))
  `(vertico-current ((t (:foreground "#222" :background ,plt-blue))))
+ `(orderless-match-face-0 ((t (:foreground "#ddd" :weight bold :underline t))))
+ `(orderless-match-face-1 ((t (:foreground ,plt-green :weight bold :underline t))))
+ `(orderless-match-face-2 ((t (:foreground ,plt-yellow :weight bold :underline t))))
+ `(orderless-match-face-3 ((t (:foreground ,plt-red :weight bold :underline t))))
  ;; w3m
  `(w3m-anchor ((t (:inherit link))))
  `(w3m-image-anchor ((t (:foreground "#222" :background ,plt-blue
