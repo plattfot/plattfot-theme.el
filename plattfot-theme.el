@@ -1,4 +1,4 @@
-;;; code:
+;;; code:  -*- lexical-binding: t; -*-
 (deftheme plattfot
   "Color theme with the roots from sunburst-theme.
 
