@@ -224,6 +224,7 @@ E.g. comments, org mode tags etc"
  (plattfot-theme--metadata 'fill-column-indicator)
  `(selectrum-current-candidate ((t (:foreground "#222" :background ,plt-blue))))
  `(vertico-current ((t (:foreground "#222" :background ,plt-blue))))
+ `(corfu-current ((t (:foreground "#222" :background ,plt-blue))))
  `(orderless-match-face-0 ((t (:weight bold :underline t))))
  `(orderless-match-face-1 ((t (:weight bold :underline ,plt-green))))
  `(orderless-match-face-2 ((t (:weight bold :underline ,plt-yellow))))
