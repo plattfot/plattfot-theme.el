@@ -112,6 +112,7 @@ E.g. comments, org mode tags etc"
 
  `(org-todo ((t (:foreground "pink" :bold t))))
  `(org-done ((t (:foreground ,plt-green :bold t))))
+ `(org-code ((t (:foreground ,plt-green :bold t))))
  `(org-document-title ((t (:foreground ,plt-blue :bold t))))
  `(buffers-tab ((t (:background "#111" :foreground "#ddd"))))
  `(font-lock-builtin-face ((t (:foreground "#dd7b3b"))))
