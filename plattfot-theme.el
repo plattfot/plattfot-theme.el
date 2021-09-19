@@ -134,6 +134,14 @@ E.g. comments, org mode tags etc"
  `(erc-notice-face ((t (:foreground "#666"))))
  `(erc-timestamp-face ((t (:foreground "#65b042"))))
  `(erc-underline-face ((t (:foreground "#c5af75"))))
+ ;; Message
+ `(message-header-name ((t (:foreground ,plt-blue))))
+ `(message-header-other ((t (:foreground "#ddd" :bold t))))
+ `(message-header-to ((t (:inherit message-header-other))))
+ `(message-header-subject ((t (:foreground ,plt-yellow :bold t))))
+ `(message-header-cc ((t (:inherit message-header-other))))
+ (plattfot-theme--metadata 'message-separator)
+ (plattfot-theme--metadata 'message-signature-separator)
  ;; Magit
  `(magit-log-sha1 ((t (:foreground "#cf6a4c"))))
  `(magit-log-head-label-local ((t (:foreground ,plt-blue))))
