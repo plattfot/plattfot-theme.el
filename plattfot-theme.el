@@ -251,6 +251,9 @@ E.g. comments, org mode tags etc"
  `(mood-line-status-error ((t (:inherit compilation-error))))
  `(mood-line-status-warning ((t (:inherit compilation-warning))))
  `(mood-line-status-info ((t (:inherit compilation-info))))
+ ;; marginalia
+ `(marginalia-on ((t (:foreground ,plt-green :weight bold))))
+ `(marginalia-off ((t (:foreground ,plt-red :weight bold))))
  )
 
 (provide-theme 'plattfot)
