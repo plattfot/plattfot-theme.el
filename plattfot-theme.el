@@ -254,6 +254,11 @@ E.g. comments, org mode tags etc"
  ;; marginalia
  `(marginalia-on ((t (:foreground ,plt-green :weight bold))))
  `(marginalia-off ((t (:foreground ,plt-red :weight bold))))
+ ;; Nano modeline
+ `(nano-modeline-active-status-** ((t (:inherit 'font-lock-builtin-face))))
+ (plattfot-theme--metadata 'nano-modeline-active-status-RO)
+ (plattfot-theme--metadata 'nano-modeline-active-status-RW)
+ (plattfot-theme--metadata 'nano-modeline-active-primary)
  )
 
 (provide-theme 'plattfot)
