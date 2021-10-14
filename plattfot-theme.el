@@ -184,6 +184,10 @@ E.g. mode line background and vertical bars."
  `(flymake-note ((t (:underline (:style wave :color ,plt-info)))))
  `(flymake-error ((t (:underline (:style wave :color ,plt-critical)))))
 
+ ;; Flyspell
+ `(flyspell-duplicate ((t (:underline (:style wave :color ,plt-select)))))
+ `(flyspell-incorrect ((t (:underline (:style wave :color ,plt-highlight)))))
+
  ;; Font lock
  (plattfot-theme--metadata 'font-lock-comment-face)
  (plattfot-theme--shadow 'font-lock-preprocessor-face)
