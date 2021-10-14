@@ -238,13 +238,6 @@ E.g. mode line background and vertical bars."
  `(company-template-field ((t (:inherit match))))
  `(company-preview-search ((t (:inherit 'company-tooltip-search))))
 
- `(popup-tip-face ((t (:foreground ,plt-foreground :background ,plt-fade))))
- `(popup-menu-mouse-face ((t (:foreground ,plt-select :background ,plt-fade))))
- `(popup-summary-face ((t (:foreground ,plt-metadata :background ,plt-fade))))
- `(popup-scroll-bar-foreground-face ((t (:background ,plt-metadata))))
- `(popup-scroll-bar-background-face ((t (:background ,plt-fade))))
- `(popup-isearch-match ((t (:foreground ,plt-metadata :background ,plt-fade))))
-
  ;; Tooltip
  `(tooltip ((t (:inherit variable-pitch :background ,plt-fade :foreground ,plt-metadata))))
 
