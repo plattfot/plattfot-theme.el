@@ -336,7 +336,6 @@ E.g. mode line background and vertical bars."
  `(ledger-font-posting-amount-face ((t (:foreground ,plt-info))))
  `(ledger-font-posting-date-face ((t (:foreground ,plt-foreground))))
  `(ledger-font-price-symbol-face ((t (:foreground ,plt-info))))
- `(ledger-font-commodity-name-face ((t (:foreground ,plt-info))))
  `(ledger-font-payee-uncleared-face ((t (:foreground ,plt-warning))))
  )
 
