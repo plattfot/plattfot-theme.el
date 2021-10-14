@@ -108,7 +108,6 @@ E.g. mode line background and vertical bars."
  `(link ((t (:foreground ,plt-select :underline t))))
  `(gui-element ((t (:background "#0e2231" :foreground "black"))))
  `(highlight ((t (:bold t :slant italic))))
- `(highline-face ((t (:background "#4a410d"))))
  `(italic ((t (nil))))
  `(left-margin ((t (nil))))
  `(mmm-default-submode-face ((t (:background ,plt-background))))
