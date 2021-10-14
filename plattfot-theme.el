@@ -232,6 +232,20 @@ E.g. mode line background and vertical bars."
  `(markdown-header-face-5 ((t (:inherit markdown-header-face))))
  `(markdown-header-face-6 ((t (:inherit markdown-header-face))))
 
+ ;; Notmuch
+ (plattfot-theme--metadata 'notmuch-crypto-part-header)
+ `(notmuch-crypto-decryption ((t (:background ,plt-warning :foreground ,plt-background))))
+ `(notmuch-crypto-signature-bad ((t (:background ,plt-critical :foreground ,plt-background))))
+ `(notmuch-crypto-signature-good ((t (:background ,plt-info :foreground ,plt-background))))
+ `(notmuch-crypto-signature-good-key ((t (:inherit notmuch-crypto-signature-good))))
+ `(notmuch-crypto-signature-unknown ((t (:background ,plt-highlight :foreground ,plt-background))))
+ `(notmuch-tag-face ((t (:inherit font-lock-string-face))))
+ `(notmuch-tag-added ((t (:underline ,plt-info))))
+ `(notmuch-tag-unread ((t (:foreground ,plt-critical))))
+ `(notmuch-tag-deleted ((t (:strike-through ,plt-critical))))
+ `(notmuch-tag-flagged ((t (:box ,plt-critical))))
+ `(notmuch-wash-cited-text ((t (:inherit message-cited-text-1))))
+
  ;; Company
  `(company-tooltip ((t (:inherit default :background ,plt-fade))))
  `(company-tooltip-selection ((t (:inherit default :background ,plt-select))))
