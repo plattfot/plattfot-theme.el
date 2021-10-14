@@ -317,9 +317,9 @@ E.g. mode line background and vertical bars."
  `(marginalia-off ((t (:foreground ,plt-critical :weight bold))))
 
  ;; Nano modeline
- `(nano-modeline-active-status-** ((t (:inherit 'font-lock-builtin-face))))
+ `(nano-modeline-active-status-** ((t (:foreground ,plt-highlight))))
+ `(nano-modeline-active-status-RO ((t (:foreground ,plt-warning))))
  (plattfot-theme--metadata 'nano-modeline-active-status-RO)
- (plattfot-theme--metadata 'nano-modeline-active-status-RW)
  (plattfot-theme--metadata 'nano-modeline-active-primary)
 
  ;; Ansi-color (Comint mode)
