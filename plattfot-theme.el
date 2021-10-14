@@ -106,7 +106,6 @@ E.g. mode line background and vertical bars."
  `(fringe  ((t (:background ,plt-background))))
  `(error  ((t (:foreground ,plt-critical :weight bold))))
  `(link ((t (:foreground ,plt-select :underline t))))
- `(gui-element ((t (:background "#0e2231" :foreground "black"))))
  `(highlight ((t (:bold t :slant italic))))
  `(italic ((t (nil))))
  `(left-margin ((t (nil))))
