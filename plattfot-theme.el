@@ -201,10 +201,10 @@ E.g. mode line background and vertical bars."
  `(erc-underline-face ((t (:foreground ,plt-warning))))
 
  ;; Message
- `(message-header-name ((t (:foreground ,plt-select))))
- `(message-header-other ((t (:foreground ,plt-foreground :bold t))))
+ `(message-header-name ((t (:foreground ,plt-warning :weight bold))))
+ `(message-header-other ((t (:foreground ,plt-foreground))))
  `(message-header-to ((t (:inherit message-header-other))))
- `(message-header-subject ((t (:foreground ,plt-warning :bold t))))
+ `(message-header-subject ((t (:foreground ,plt-shine))))
  `(message-header-cc ((t (:inherit message-header-other))))
  (plattfot-theme--metadata 'message-separator)
  (plattfot-theme--metadata 'message-signature-separator)
