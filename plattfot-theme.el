@@ -331,6 +331,12 @@ E.g. mode line background and vertical bars."
  `(ledger-font-posting-date-face ((t (:foreground ,plt-foreground))))
  `(ledger-font-price-symbol-face ((t (:foreground ,plt-info))))
  `(ledger-font-payee-uncleared-face ((t (:foreground ,plt-warning))))
+
+ ;; Isearch
+ `(isearch ((t (:foreground ,plt-fade :background ,plt-select))))
+ `(isearch-fail ((t (:background ,plt-critical))))
+ `(lazy-highlight ((t (:background ,plt-metadata :foreground ,plt-foreground))))
+ `(query-replace ((t (:inherit isearch))))
  )
 
 (provide-theme 'plattfot)
