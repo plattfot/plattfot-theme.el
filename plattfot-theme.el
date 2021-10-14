@@ -275,9 +275,17 @@ E.g. mode line background and vertical bars."
  `(popup-menu-selection-face ((t (:foreground ,plt-background :background ,plt-select :weight bold))))
  `(popup-menu-mouse-face ((t (:foreground ,plt-background :background ,plt-select))))
  (plattfot-theme--metadata 'fill-column-indicator)
+
+ ;; Selectrum
  `(selectrum-current-candidate ((t (:foreground ,plt-fade :background ,plt-select))))
+
+ ;; Vertico
  `(vertico-current ((t (:foreground ,plt-fade :background ,plt-select))))
+
+ ;; Corfu
  `(corfu-current ((t (:foreground ,plt-fade :background ,plt-select))))
+
+ ;; Orderless
  `(orderless-match-face-0 ((t (:weight bold :underline t))))
  `(orderless-match-face-1 ((t (:weight bold :underline ,plt-info))))
  `(orderless-match-face-2 ((t (:weight bold :underline ,plt-warning))))
