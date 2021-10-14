@@ -277,13 +277,13 @@ E.g. mode line background and vertical bars."
  (plattfot-theme--metadata 'fill-column-indicator)
 
  ;; Selectrum
- `(selectrum-current-candidate ((t (:foreground ,plt-fade :background ,plt-select))))
+ `(selectrum-current-candidate ((t (:inherit isearch))))
 
  ;; Vertico
- `(vertico-current ((t (:foreground ,plt-fade :background ,plt-select))))
+ `(vertico-current ((t (:inherit isearch))))
 
  ;; Corfu
- `(corfu-current ((t (:foreground ,plt-fade :background ,plt-select))))
+ `(corfu-current ((t (:inherit isearch))))
 
  ;; Orderless
  `(orderless-match-face-0 ((t (:weight bold :underline t))))
