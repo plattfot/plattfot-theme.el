@@ -238,10 +238,6 @@ E.g. mode line background and vertical bars."
  `(company-template-field ((t (:inherit match))))
  `(company-preview-search ((t (:inherit 'company-tooltip-search))))
 
- ;; Auto-complete
- `(ac-completion-face ((t (:inherit default :foreground ,plt-metadata :underline t))))
- `(ac-candidate-face ((t (:background ,plt-fade))))
- `(ac-selection-face ((t (:foreground ,plt-foreground :background ,plt-select))))
  `(popup-tip-face ((t (:foreground ,plt-foreground :background ,plt-fade))))
  `(popup-menu-mouse-face ((t (:foreground ,plt-select :background ,plt-fade))))
  `(popup-summary-face ((t (:foreground ,plt-metadata :background ,plt-fade))))
