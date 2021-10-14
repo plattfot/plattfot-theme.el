@@ -35,7 +35,7 @@ to a minimum.")
   :type 'string
   :group 'plattfot-theme)
 
-(defcustom plt-info "#87cc32"
+(defcustom plt-info "#7ab92d"
   "For faces that represent higher value information.
 
 Compared to the default faces."
