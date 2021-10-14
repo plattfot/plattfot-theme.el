@@ -219,7 +219,9 @@ E.g. mode line background and vertical bars."
  (plattfot-theme--metadata 'message-signature-separator)
 
  ;; Magit
- ;; TODO
+ `(magit-branch-local ((t (:foreground ,plt-select))))
+ `(magit-branch-remote ((t (:foreground ,plt-info))))
+ `(magit-section-heading ((t (:foreground ,plt-warning :weight bold :extend t))))
 
  ;; Markdown
  `(markdown-language-keyword-face ((t (:inherit font-lock-keyword-face))))
