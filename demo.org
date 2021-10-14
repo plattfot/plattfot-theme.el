@@ -1,0 +1,240 @@
+#+TITLE: Demo of the plattfot theme
+#+PROPERTY: header-args:emacs-lisp :lexical t
+#+startup: num
+
+* Show the org layout
+** With subheadings
+
+And text with inline =verbatim= and ~code~ text.
+[[file:plattfot-theme.el][Link to the theme file]]
+
+* TODO Show todo
+* DONE Show done
+SCHEDULED: <2021-10-13 ons>
+:LOGBOOK:
+- State "DONE"       from "TODO"       [2021-10-13 ons 11:05]
+:END:
+
+* Code blocks
+
+Demonstrate the theme on different programming languages that I use.
+
+** Bash
+
+#+begin_src bash
+  foo=(1 2 3)
+
+  #input:
+  #1: msg
+  #2…: vector
+  #output:
+  # Print "MSG: VEC" to stdout
+  function print
+  {
+      msg=$1
+      shift
+      echo "$msg: $@"
+  }
+
+  print "Original" ${foo[@]}
+  declare -a add
+  for x in "${foo[@]}"
+  do
+      add+=($(( x + 3 )))
+  done
+  print "Add" ${add[@]}
+  sum=0
+  for x in "${add[@]}"
+  do
+      let sum+=$x
+  done
+  echo "Sum: $sum"
+#+end_src
+
+#+RESULTS:
+| Original: |  1 | 2 | 3 |
+| Add:      |  4 | 5 | 6 |
+| Sum:      | 15 |   |   |
+
+** C++ block
+
+Show a function definition in C++ with the theme.
+#+NAME: cxx_print
+#+begin_src cpp
+  /// Standalone function
+  int print(const std::string_view msg, const std::vector<int>& vec)
+  {
+    // Print vec to stdout.
+    std::cout<<msg<<": ";
+    std::for_each(begin(vec), end(vec), [](const int i){std::cout<<i<<" ";});
+    std::cout<<std::endl;
+  }
+#+end_src
+
+#+RESULTS: cxx_print
+
+Show a simple toy example on the various types in C++.
+
+#+begin_src cpp :includes <string_view> <iostream> <vector> <algorithm> :flags -std=c++20
+  #define ONE 1
+  #define TWO 2
+  #define THREE 3
+
+  std::vector<int> foo{ONE, TWO, THREE};
+
+  auto print = [](const std::string_view msg, const std::vector<int>& vec)
+  {
+    std::cout<<msg<<": ";
+    std::for_each(begin(vec), end(vec), [](const int i){std::cout<<i<<" ";});
+    std::cout<<std::endl;
+  };
+
+  struct Sum {
+  public:
+    void operator() (const int i)
+    {
+      m_sum += i;
+    }
+    int sum() const {return this->m_sum;}
+  private:
+    int m_sum = 0;
+  };
+
+  auto add_to = []<typename T>(const T add)
+  {
+    return [add](int& i)
+    {
+      i += add;
+    };
+  };
+
+  print("Original", foo);
+  std::for_each(begin(foo), end(foo), add_to(3));
+  print("Add", foo);
+  const auto sum = std::for_each(begin(foo), end(foo), Sum());
+  std::cout<<"Sum: "<<sum.sum()<<std::endl;
+#+end_src
+
+#+RESULTS:
+| Original: |  1 | 2 | 3 |
+| Add:      |  4 | 5 | 6 |
+| Sum:      | 15 |   |   |
+
+Yes, I know there's a better way of doing this. But this is just a toy
+example to show the theme.
+
+** Elisp
+#+begin_src emacs-lisp
+  (require 'seq)
+
+  ;; Does not really have a class so skipping the Sum class
+
+  (defvar foo [1 2 3]
+    "A vector containing numbers")
+
+  (defun print (msg vec)
+    "Print MSG: VEC"
+    (format "%s: %s" msg (string-join (seq-map 'number-to-string vec) " ")))
+
+  ;; Return the formated output as a string
+  (let* ((add (seq-map (lambda (i) (+ i 3)) foo))
+         (sum (seq-reduce (lambda (sum value) (+ sum value)) add 0)))
+    (format "%s\n%s\nSum: %s" (print "Original" foo) (print "Add" foo) sum))
+#+end_src
+
+#+RESULTS:
+: Original: 1 2 3
+: Add: 1 2 3
+: Sum: 15
+** Guile
+
+#+begin_src scheme :results output
+  (use-modules
+   (ice-9 format)
+   (srfi srfi-43)) ;; vector library
+
+  (define-once foo #(1 2 3))
+
+  ;; Does not have a class so skipping the Sum class
+
+  (define (print msg vec)
+    "Create string \"MSG: VEC\""
+    (format #f "~a: ~a"
+            msg
+            (string-join (map number->string (vector->list vec)) " ")))
+
+  ;; Return the formated output as a string
+  (let* ((add (vector-map (lambda (i value) (+ value 3)) foo))
+         (sum (vector-fold (lambda (i sum value) (+ sum value)) 0 add)))
+    (format #t "~a~%~a~%Sum: ~a" (print "Original" foo) (print "Add" foo) sum))
+
+#+end_src
+
+#+RESULTS:
+: Original: 1 2 3
+: Add: 1 2 3
+: Sum: 15
+
+** Python
+
+#+begin_src python :results output
+  from typing import List
+
+  foo = [1, 2, 3]
+
+  def printVec(msg: str, vec: List):
+      """Print vector with msg tagged on."""
+      print(f"{msg}: {' '.join((str(i) for i in vec))}")
+
+  class Sum:
+      def __init__(self):
+          self.m_sum = 0
+
+      def __call__(self, i):
+          self.m_sum += i
+
+      def sum(self):
+          return self.m_sum
+
+  printVec("Original", foo)
+  foo = [i + 3 for i in foo]
+
+  sum = Sum()
+  for i in foo:
+      sum(i)
+
+  printVec("Add", foo)
+
+  print(f"Sum: {sum.sum()}")
+#+end_src
+
+#+RESULTS:
+: Original: 1 2 3
+: Add: 4 5 6
+: Sum: 15
+
+* Docs
+** Markdown
+#+begin_src markdown
+  # Heading
+
+  Some text with `inline code` and link to [theme](https://github.com/plattfot/plattfot-theme.el)
+
+  ```bash
+      cd foo && make && make install
+  ```
+#+end_src
+
+** Yaml
+
+#+begin_src yaml
+  ---
+  name: package
+  version: "1.2.3"
+  recipes:
+    build: &anchor
+      - make
+      - make install
+    install:
+      <<: *anchor
+#+end_src
