@@ -179,6 +179,11 @@ E.g. mode line background and vertical bars."
  (plattfot-theme--shadow 'org-headline-done)
  `(org-document-title ((t (:inherit outline-1))))
 
+ ;; Flymake
+ `(flymake-warning ((t (:underline (:style wave :color ,plt-warning)))))
+ `(flymake-note ((t (:underline (:style wave :color ,plt-info)))))
+ `(flymake-error ((t (:underline (:style wave :color ,plt-critical)))))
+
  ;; Font lock
  (plattfot-theme--metadata 'font-lock-comment-face)
  (plattfot-theme--shadow 'font-lock-preprocessor-face)
