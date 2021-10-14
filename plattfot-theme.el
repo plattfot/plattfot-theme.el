@@ -206,6 +206,13 @@ E.g. mode line background and vertical bars."
  `(message-header-to ((t (:inherit message-header-other))))
  `(message-header-subject ((t (:foreground ,plt-shine))))
  `(message-header-cc ((t (:inherit message-header-other))))
+ `(message-cited-text-1 ((t (:foreground "gray70"))))
+ `(message-cited-text-2 ((t (:foreground "gray65"))))
+ `(message-cited-text-3 ((t (:foreground "gray60"))))
+ `(message-cited-text-4 ((t (:foreground "gray55"))))
+ (plattfot-theme--metadata 'message-header-xheader)
+ (plattfot-theme--metadata 'message-header-newsgroups)
+ (plattfot-theme--metadata 'message-mml)
  (plattfot-theme--metadata 'message-separator)
  (plattfot-theme--metadata 'message-signature-separator)
 
