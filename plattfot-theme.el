@@ -113,7 +113,7 @@ E.g. mode line background and vertical bars."
  ;; Info
  (plattfot-theme--shadow 'Info-quoted)
  `(info-menu-star ((t (:foreground ,plt-warning))))
- `(link-visited ((t (:foreground ,plt-metadata :inherit link))))
+ `(link-visited ((t (:inherit link :underline ,plt-metadata))))
  `(mode-line-inactive  ((t (:background ,plt-fade :foreground ,plt-metadata))))
  `(mode-line           ((t (:background ,plt-fade :foreground ,plt-select))))
 
