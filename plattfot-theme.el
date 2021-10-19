@@ -201,6 +201,9 @@ E.g. mode line background and vertical bars."
  `(erc-timestamp-face ((t (:foreground ,plt-info))))
  `(erc-underline-face ((t (:foreground ,plt-warning))))
 
+ ;; Make
+ `(makefile-space ((t (:background ,plt-critical))))
+
  ;; Message
  `(message-header-name ((t (:foreground ,plt-warning :weight bold))))
  `(message-header-other ((t (:foreground ,plt-foreground))))
