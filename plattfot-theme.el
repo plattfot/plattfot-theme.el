@@ -191,6 +191,7 @@ E.g. mode line background and vertical bars."
  `(font-lock-type-face ((t (:inherit default))))
  `(font-lock-variable-name-face ((t (:inherit default))))
  `(font-lock-warning-face ((t (:bold t :foreground ,plt-critical))))
+ `(font-lock-doc-markup-face ((t (:inherit font-lock-doc-face :weight bold :slant italic))))
 
  ;; ERC
  `(erc-current-nick-face ((t (:inherit shadow))))
