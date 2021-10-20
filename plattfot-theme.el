@@ -57,12 +57,12 @@ Compared to the default faces."
   :type 'string
   :group 'plattfot-theme)
 
-(defcustom plt-shine "#ffffff"
+(defcustom plt-shine "gray100"
   "For face that need subtle highlight."
   :type 'string
   :group 'plattfot-theme)
 
-(defcustom plt-foreground "#dddddd"
+(defcustom plt-foreground "gray90"
   "Foreground face color"
   :type 'string
   :group 'plattfot-theme)
@@ -74,14 +74,14 @@ E.g. comments, tags etc"
   :type 'string
   :group 'plattfot-theme)
 
-(defcustom plt-fade "#222222"
+(defcustom plt-fade "gray13"
   "Face color for faces that should be faded into the background.
 
 E.g. mode line background and vertical bars."
   :type 'string
   :group 'plattfot-theme)
 
-(defcustom plt-background "#111111"
+(defcustom plt-background "gray7"
   "Background face color"
   :type 'string
   :group 'plattfot-theme)
