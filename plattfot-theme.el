@@ -135,7 +135,7 @@ E.g. mode line background and vertical bars."
  `(trailing-whitespace ((t (:background ,plt-critical))))
 
  ;; Org-mode list and other outline things
- `(outline-1 ((t (:foreground ,plt-foreground :weight extra-bold :height 1.16))))
+ `(outline-1 ((t (:foreground ,plt-foreground :weight extra-bold :height 1.05))))
  `(outline-2 ((t (:inherit outline-1))))
  `(outline-3 ((t (:inherit outline-1))))
  `(outline-4 ((t (:inherit outline-1))))
