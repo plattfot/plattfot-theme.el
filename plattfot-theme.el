@@ -118,7 +118,7 @@ E.g. mode line background and vertical bars."
  `(mode-line           ((t (:background ,plt-fade :foreground ,plt-select))))
 
  ;; show parens
- `(show-paren-match ((t (:foreground ,plt-shine :background ,plt-select))))
+ `(show-paren-match ((t (:foreground ,plt-shine :background ,plt-info))))
  `(show-paren-mismatch ((t (:foreground ,plt-shine :background ,plt-critical))))
 
  ;; eglot
