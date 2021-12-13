@@ -106,6 +106,7 @@ E.g. mode line background and vertical bars."
  `(highlight ((t (:bold t :slant italic))))
  `(left-margin ((t (nil))))
  `(region ((t (:background ,plt-select))))
+ `(secondary-selection ((t (:background "gray25"))))
 
  (plattfot-theme--metadata  'escape-glyph)
  (plattfot-theme--metadata 'nobreak-hyphen)
