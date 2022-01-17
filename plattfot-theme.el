@@ -94,6 +94,20 @@ E.g. mode line background and vertical bars."
   "Fade the FACE into the background."
   `(,face ((t (:inherit shadow)))))
 
+(defun plattfot-theme--mark (face number)
+  "Mark FACE by making it bold and underline.
+
+NUMBER: pick color of underline.
+  - 0: same as face.
+  - 1: info
+  - 2: warning
+  - 3: critical"
+  `(,face ((t (:weight bold :underline ,(pcase (% number 4)
+                                          (0 t)
+                                          (1 plt-info)
+                                          (2 plt-warning)
+                                          (3 plt-critical)))))))
+
 (custom-theme-set-faces
  'plattfot
  (if window-system `(default ((t (:background ,plt-background :foreground ,plt-foreground))))
@@ -110,6 +124,12 @@ E.g. mode line background and vertical bars."
 
  (plattfot-theme--metadata  'escape-glyph)
  (plattfot-theme--metadata 'nobreak-hyphen)
+
+ ;; Avy
+ (plattfot-theme--mark 'avy-lead-face 0)
+ (plattfot-theme--mark 'avy-lead-face-0 1)
+ (plattfot-theme--mark 'avy-lead-face-1 2)
+ (plattfot-theme--mark 'avy-lead-face-2 3)
 
  ;; Info
  (plattfot-theme--shadow 'Info-quoted)
@@ -312,10 +332,10 @@ E.g. mode line background and vertical bars."
  `(corfu-current ((t (:inherit isearch))))
 
  ;; Orderless
- `(orderless-match-face-0 ((t (:weight bold :underline t))))
- `(orderless-match-face-1 ((t (:weight bold :underline ,plt-info))))
- `(orderless-match-face-2 ((t (:weight bold :underline ,plt-warning))))
- `(orderless-match-face-3 ((t (:weight bold :underline ,plt-critical))))
+ (plattfot-theme--mark 'orderless-match-face-0 0)
+ (plattfot-theme--mark 'orderless-match-face-1 1)
+ (plattfot-theme--mark 'orderless-match-face-2 2)
+ (plattfot-theme--mark 'orderless-match-face-3 3)
 
  ;; w3m
  `(w3m-anchor ((t (:inherit link))))
