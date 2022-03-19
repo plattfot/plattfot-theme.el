@@ -119,7 +119,7 @@ NUMBER: pick color of underline.
  `(link ((t (:foreground ,plt-select :underline t :distant-foreground ,plt-foreground))))
  `(highlight ((t (:bold t :slant italic))))
  `(left-margin ((t (nil))))
- `(region ((t (:background ,plt-select :distant-foreground ,plt-foreground))))
+ `(region ((t (:background ,plt-select :foreground ,plt-foreground))))
  `(secondary-selection ((t (:background "gray25" :distant-foreground ,plt-foreground))))
 
  (plattfot-theme--metadata  'escape-glyph)
